@@ -3,7 +3,15 @@ const app = express()
 const cors = require('cors')
 
 const corsOptions = {
-    origin: ['http://localhost:3000', 'https://msubyoteshin.com/', 'https://msubmovie.vercel.app/'],
+    origin: [
+        'http://localhost:3000', 
+        'https://msubyoteshin.com/', 
+        'https://msubyoteshin.com/en', 
+        'https://msubyoteshin.com/my', 
+        'https://msubmovie.vercel.app/', 
+        'https://msubmovie.vercel.app/my', 
+        'https://msubmovie.vercel.app/en',
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'HEAD', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Origin', 'X-Requested-With', 'Accept', 'x-client-key', 'x-client-token', 'x-client-secret', 'Authorization'],
     credentials: true, //access-control-allow-credentials:true
