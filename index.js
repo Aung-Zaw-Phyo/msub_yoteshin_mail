@@ -27,8 +27,8 @@ const transport = nodemailer.createTransport({
     secure: true,
     name: 'Chat',
     auth: {
-        user: "aungzawphyo.dev@gmail.com",
-        pass: "zaweyidcteuyqjmr",
+        user: "yethwaycoding@gmail.com",
+        pass: "gcnsuhhzpvqlzipu",
     },
 })
 
@@ -46,7 +46,7 @@ app.post('/api/send-email', async(req, res, next) => {
         }
         const mailOptions = {
             from: '"MSub YoteShin" <user@gmail.com>',
-            to: 'aungzawphyo1102@gmail.com',
+            to: 'spiderman.innywa@gmail.com',
             subject: `MESSAGE`,
             text: message
         }
