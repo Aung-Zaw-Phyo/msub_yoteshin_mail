@@ -27,8 +27,8 @@ const transport = nodemailer.createTransport({
     secure: true,
     name: 'Chat',
     auth: {
-        user: "yethwaycoding@gmail.com",
-        pass: "gcnsuhhzpvqlzipu",
+        user: "aungzawphyo.dev@gmail.com",
+        pass: "zaweyidcteuyqjmr",
     },
 })
 
@@ -46,7 +46,7 @@ app.post('/api/send-email', async(req, res, next) => {
         }
         const mailOptions = {
             from: '"MSub YoteShin" <user@gmail.com>',
-            to: 'spiderman.innywa@gmail.com',
+            to: 'yethwaycoding@gmail.com',
             subject: `MESSAGE`,
             text: message
         }
@@ -54,6 +54,7 @@ app.post('/api/send-email', async(req, res, next) => {
             if (!err) {
                 res.status(200).json({ status: true, message: 'Successfully Sent Message.' })
             } else {
+                console.log('*********************', err);
                 res.status(422).json({ status: false, message: 'Message Sending Fail!' })
             }
         })
